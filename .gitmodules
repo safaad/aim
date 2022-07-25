@@ -1,0 +1,3 @@
+[submodule "aim-genasm"]
+	path = aim-genasm
+	url = https://github.com/safaad/aim-genasm.git
