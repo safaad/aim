@@ -1,5 +1,7 @@
 #! /usr/bin/bash 
 
+# make sure Datasets/bin/generate_dataset exists (https://github.com/smarco/WFA)
+
 set -x
 
 seqLengths=("100" "1000" "5000" "10000" "20000" "25000" "50000" "100000")
