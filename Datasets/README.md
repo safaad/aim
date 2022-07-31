@@ -1,3 +1,4 @@
+## The datasets can be downloaded from https://zenodo.org/record/6938771#.YuZef3ZByUk !
 We evaluate AIM using two types of datasets: (1) real datasets for short sequence pairs, (2) synthetic datasets for long sequence pairs
 
 ## Real datasets for short sequence pairs (100bp, 150bp, and 250bp long)
