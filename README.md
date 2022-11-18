@@ -19,7 +19,8 @@ Long paper:
 
 
 HiCOMB22 short paper ([slides](https://people.inf.ethz.ch/omutlu/pub/WFA-PairwiseAlignment-in-PIM_hicomb22-GPU-hicomb22-talk)):
-> S. Diab, A. Nassereldine, M. Alser, J. G. Luna, O. Mutlu, and I. E. Hajj, "**[High-throughput Pairwise Alignment with the Wavefront Algorithm using Processing-in-Memory.](https://arxiv.org/abs/2204.02085)**" arXiv, 2022. doi: 10.48550/ARXIV.2204.02085.
+
+> S. Diab, et al., "**[High-throughput Pairwise Alignment with the Wavefront Algorithm using Processing-in-Memory](https://www.computer.org/csdl/proceedings-article/ipdpsw/2022/974700a163/1Fu98na0V3y)**", in 2022 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW), Lyon, France, 2022 pp. 163-163. doi: 10.1109/IPDPSW55747.2022.00039
 
 If you find this project useful, please cite these papers.
 ## Repository Structure
