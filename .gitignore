@@ -1,2 +1,7 @@
 **/out
+**/dpu-out
 **/build
+.vscode/*
+Datasets/const-seq/*
+Datasets/var-seq/*
+Datasets/bin/*

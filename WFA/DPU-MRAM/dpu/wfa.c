@@ -140,16 +140,22 @@ void affine_wfa_reduce_wvs(wfa_component *wfa, awf_offset_t pattern_length, awf_
     }
 }
 // insert new score
+// change this function so it allocates using score % needed
+// EDIT THIS FUNCTION!!!!
 wfa_component *allocate_new_score(dpu_alloc_wram_t *allocator, int score, int lo, int hi, int kernel, uint32_t *mramIdx, dpu_alloc_mram_t *dpu_alloc_mram)
 {
     int wv_len = hi - lo + 1;
     uint32_t cmpnt_size = 0;
 
+// these two lines show that the size of the wfa_cmpnt is constant, but the size of the wfa cmpnt's offsets is not constant.
     wfa_component *wfa_cmpnt = (wfa_component *)allocate_new(allocator, sizeof(wfa_component));
     awf_offset_t *offset_ptr = (awf_offset_t *)allocate_new(allocator, (wv_len * sizeof(awf_offset_t)));
 
     wfa_cmpnt->mwavefront = (awf_offset_t *)(offset_ptr - lo);
     cmpnt_size += ROUND_UP_MULTIPLE_8(wv_len * sizeof(awf_offset_t));
+    // kernel = 3 means I and D
+    // kernel = 2 means I
+    // kernel = 1 means D
     if (kernel == 3 || kernel == 1)
     {
 
@@ -281,6 +287,7 @@ wfa_component *affine_wfa_compute_next(int score, uint32_t *mramIdx, dpu_alloc_w
     int o_score = score - GAP_O - GAP_E;
     int e_score = score - GAP_E;
 
+// edit here so it computes differently and loads mwaefront from score % something
     wfa_component *wfa_mismatch = (mismatch_score < 0 || mramIdx[mismatch_score] == 0) ? NULL : load_mwavefront_cmpnt_from_mram(alloc_obj, mramIdx[mismatch_score]);
     wfa_component *wfa_o_score = (o_score < 0 || mramIdx[o_score] == 0) ? NULL : load_mwavefront_cmpnt_from_mram(alloc_obj, mramIdx[o_score]);
     wfa_component *wfa_e_score = (e_score < 0 || mramIdx[e_score] == 0) ? NULL : load_idwavefront_cmpnt_from_mram(alloc_obj, mramIdx[e_score]);
