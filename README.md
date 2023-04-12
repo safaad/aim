@@ -15,7 +15,7 @@ Our evaluation shows that a real PIM system can substantially outperform CPU sys
 For more information on this project you can refer to the following papers:
 
 Long paper:
-> Safaa Diab, Amir Nassereldine, Mohammed Alser, Juan Gómez Luna, Onur Mutlu, Izzat El Hajj, "**[A Framework for High-throughput Sequence Alignment using Real Processing-in-Memory Systems", Bioinformatics, 2023;](https://doi.org/10.1093/bioinformatics/btad155)**, btad155, https://doi.org/10.1093/bioinformatics/btad155
+> Safaa Diab, Amir Nassereldine, Mohammed Alser, Juan Gómez Luna, Onur Mutlu, Izzat El Hajj, "**[A Framework for High-throughput Sequence Alignment using Real Processing-in-Memory Systems"](https://doi.org/10.1093/bioinformatics/btad155)**, Bioinformatics, 2023; btad155, https://doi.org/10.1093/bioinformatics/btad155
 
 
 HiCOMB22 short paper ([slides](https://people.inf.ethz.ch/omutlu/pub/WFA-PairwiseAlignment-in-PIM_hicomb22-GPU-hicomb22-talk)):
