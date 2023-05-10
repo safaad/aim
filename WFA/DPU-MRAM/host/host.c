@@ -338,13 +338,13 @@ int main(int argc, char *argv[])
         for (i = 0; i < dpuParams[dpu].dpuNumReads; ++i)
         {
             fprintf(output_file, "%d, %d, \n", dpuResults[dpu][i].idx, dpuResults[dpu][i].score);
+
+#ifdef BACKTRACE
             edit_cigar_t cigar;
             cigar.score = dpuResults[dpu][i].score;
             cigar.max_operations = dpuResults[dpu][i].max_operations;
             cigar.begin_offset = dpuResults[dpu][i].begin_offset;
             cigar.end_offset = dpuResults[dpu][i].end_offset;
-
-#ifdef BACKTRACE
             cigar.operations = (char *)malloc(ROUND_UP_MULTIPLE_8(cigar.max_operations));
             strncpy(cigar.operations, &(operations[i * 2 * READ_SIZE]), ROUND_UP_MULTIPLE_8(cigar.max_operations));
             edit_cigar_print(&cigar, output_file);
